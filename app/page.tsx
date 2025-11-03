@@ -11,113 +11,103 @@ import {
 import { getServerI18n } from "./lib/i18n/server";
 import LanguageSwitcher from "./ui/languageSwitcher";
 
-const pillars = [
-  {
-    title: "Forecast demand with clarity",
-    description:
-      "Blend historical patterns, seasonality, and promotions so every planning cycle starts with a confident demand signal.",
-    icon: ChartBarIcon,
-  },
-  {
-    title: "Plan purchasing with precision",
-    description:
-      "Translate demand into smart order recommendations that respect supplier lead times, pack sizes, and service targets.",
-    icon: AdjustmentsHorizontalIcon,
-  },
-  {
-    title: "Unlock working capital",
-    description:
-      "Keep critical SKUs in stock while trimming excess on slow movers to free cash and reinvest in growth initiatives.",
-    icon: BanknotesIcon,
-  },
-] satisfies {
-  title: string;
-  description: string;
-  icon: typeof ChartBarIcon;
-}[];
-
-const painPoints = [
-  "Hours lost every week wrestling with spreadsheets and stale data.",
-  "Guesswork on what to replenish first, leading to costly stockouts.",
-  "Inventory bloated with products that aren’t moving fast enough.",
-];
-
-const positiveOutcomes = [
-  "A single reliable view of demand and purchasing priorities.",
-  "Confidence that the right SKUs stay available for key accounts.",
-  "Working capital freed up to fuel merchandising and growth.",
-];
-
-const flowSteps = [
-  {
-    title: "Segment what matters",
-    description:
-      "Identify the SKUs that drive revenue, margin, or customer promises so the team knows where to focus first.",
-  },
-  {
-    title: "Model forward scenarios",
-    description:
-      "Preview how demand shifts, supplier changes, or new launches will impact inventory weeks before decisions are due.",
-  },
-  {
-    title: "Act with agility",
-    description:
-      "Turn plans into purchase orders, allocation moves, and replenishment tasks that keep operations nimble and resilient.",
-  },
-];
-
-const testimonials = [
-  {
-    quote:
-      "Zuply8 gave us the clarity to reorder in hours instead of days. Stockouts on priority lines dropped almost immediately.",
-    name: "Isabella Chen",
-    role: "VP Operations",
-    company: "UrbanCart Wholesale",
-  },
-  {
-    quote:
-      "We now plan demand and purchases in the same workspace. The team trusts the numbers, and our buyers stay ahead of changes.",
-    name: "Miguel Santos",
-    role: "Director of Supply Chain",
-    company: "MercadoNova Retail Group",
-  },
-  {
-    quote:
-      "The visibility into cash tied up in slow movers let us rebalance inventory without hurting service levels.",
-    name: "Lydia Alvarez",
-    role: "Inventory Planning Lead",
-    company: "NorthPeak Outfitters",
-  },
-];
-
-const metrics = [
-  {
-    value: "30%",
-    label: "Less time spent assembling purchase orders",
-  },
-  {
-    value: "25%",
-    label: "Reduction in stockouts across critical SKUs",
-  },
-  {
-    value: "18%",
-    label: "Inventory cash freed within the first quarter",
-  },
-];
-
-const lngs = {
-  en: { nativeName: "En" },
-  de: { nativeName: "De" },
-  es: { nativeName: "Es" },
-};
+// Icon mappings for pillar items
+const iconMap = {
+  "Forecast demand with clarity": ChartBarIcon,
+  "Plan purchasing with precision": AdjustmentsHorizontalIcon,
+  "Unlock working capital": BanknotesIcon,
+} as const;
 
 export default async function Home() {
   const { t, lng } = await getServerI18n("translation");
+
+  // Build arrays from translations
+  const pillars = [
+    {
+      title: t("pillars.items.0.title"),
+      description: t("pillars.items.0.description"),
+      icon: ChartBarIcon,
+    },
+    {
+      title: t("pillars.items.1.title"),
+      description: t("pillars.items.1.description"),
+      icon: AdjustmentsHorizontalIcon,
+    },
+    {
+      title: t("pillars.items.2.title"),
+      description: t("pillars.items.2.description"),
+      icon: BanknotesIcon,
+    },
+  ];
+
+  const painPoints = [
+    t("challenges.painPoints.0"),
+    t("challenges.painPoints.1"),
+    t("challenges.painPoints.2"),
+  ];
+
+  const positiveOutcomes = [
+    t("challenges.positiveOutcomes.0"),
+    t("challenges.positiveOutcomes.1"),
+    t("challenges.positiveOutcomes.2"),
+  ];
+
+  const flowSteps = [
+    {
+      title: t("flow.steps.0.title"),
+      description: t("flow.steps.0.description"),
+    },
+    {
+      title: t("flow.steps.1.title"),
+      description: t("flow.steps.1.description"),
+    },
+    {
+      title: t("flow.steps.2.title"),
+      description: t("flow.steps.2.description"),
+    },
+  ];
+
+  const testimonials = [
+    {
+      quote: t("testimonials.items.0.quote"),
+      name: t("testimonials.items.0.name"),
+      role: t("testimonials.items.0.role"),
+      company: t("testimonials.items.0.company"),
+    },
+    {
+      quote: t("testimonials.items.1.quote"),
+      name: t("testimonials.items.1.name"),
+      role: t("testimonials.items.1.role"),
+      company: t("testimonials.items.1.company"),
+    },
+    {
+      quote: t("testimonials.items.2.quote"),
+      name: t("testimonials.items.2.name"),
+      role: t("testimonials.items.2.role"),
+      company: t("testimonials.items.2.company"),
+    },
+  ];
+
+  const metrics = [
+    {
+      value: t("metrics.items.0.value"),
+      label: t("metrics.items.0.label"),
+    },
+    {
+      value: t("metrics.items.1.value"),
+      label: t("metrics.items.1.label"),
+    },
+    {
+      value: t("metrics.items.2.value"),
+      label: t("metrics.items.2.label"),
+    },
+  ];
+
   return (
     <main className="relative isolate overflow-hidden pb-24">
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-[-16rem] h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-indigo-500/40 blur-[160px]" />
-        <div className="absolute bottom-[-18rem] right-[-6rem] h-[28rem] w-[28rem] rounded-full bg-sky-400/30 blur-[160px]" />
+        <div className="absolute left-1/2 -top-64 h-128 w-lg -translate-x-1/2 rounded-full bg-indigo-500/40 blur-[160px]" />
+        <div className="absolute -bottom-72 -right-24 h-112 w-md rounded-full bg-sky-400/30 blur-[160px]" />
       </div>
 
       <section className="section-shell pt-24 md:pt-32">
@@ -126,20 +116,17 @@ export default async function Home() {
             <div className="badge-soft mb-6">{t("target")}</div>
             <LanguageSwitcher />
             <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-              Know what to buy, when to buy it, and how it fuels your next
-              quarter.
+              {t("hero.headline")}
             </h1>
             <p className="mt-6 text-lg text-slate-300">
-              Zuply8 brings purchasing, demand, and inventory planning into one
-              advanced workspace. See how your business will evolve, keep
-              priority items ready, and release cash from what can wait.
+              {t("hero.subheadline")}
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
               <a
                 href="#book-demo"
                 className="cta-primary inline-flex items-center justify-center px-6 py-3 text-base"
               >
-                <span>Book a demo</span>
+                <span>{t("hero.ctaDemo")}</span>
                 <ArrowRightIcon className="ml-2 h-5 w-5" />
               </a>
               <a
@@ -147,32 +134,31 @@ export default async function Home() {
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-medium text-slate-200 transition hover:border-white/40 hover:text-white"
               >
                 <PlayCircleIcon className="h-5 w-5" />
-                Watch how Zuply8 works
+                {t("hero.ctaWatch")}
               </a>
             </div>
             <div className="mt-8 flex flex-wrap gap-4 text-sm text-slate-400">
               <span className="inline-flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-emerald-400" />
-                Trusted by modern planning teams
+                {t("hero.trustBadge1")}
               </span>
               <span className="inline-flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-indigo-400" />
-                Built for complex SKU portfolios
+                {t("hero.trustBadge2")}
               </span>
             </div>
           </div>
 
           <div id="product-video" className="relative">
             <div className="surface-glass relative overflow-hidden p-6">
-              <div className="aspect-[16/10] w-full rounded-2xl bg-gradient-to-br from-slate-800/80 via-slate-900/60 to-slate-950/80 p-1">
+              <div className="aspect-16/10 w-full rounded-2xl bg-linear-to-br from-slate-800/80 via-slate-900/60 to-slate-950/80 p-1">
                 <div className="flex h-full w-full items-center justify-center rounded-[18px] border border-white/10 bg-slate-950/60">
                   <div className="flex flex-col items-center gap-3 text-center">
                     <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white/30 bg-white/5">
                       <PlayCircleIcon className="h-10 w-10 text-indigo-300" />
                     </div>
                     <p className="max-w-sm text-sm text-slate-300">
-                      Product walkthrough video coming soon. Request a demo to
-                      see Zuply8 in action.
+                      {t("hero.videoPlaceholder")}
                     </p>
                   </div>
                 </div>
@@ -188,29 +174,27 @@ export default async function Home() {
         aria-labelledby="planning-challenges"
       >
         <div className="surface-glass relative overflow-hidden p-10">
-          <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-indigo-500/10 to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-1/2 bg-linear-to-r from-indigo-500/10 to-transparent" />
           <div className="relative grid gap-10 md:grid-cols-2">
             <div>
               <h2
                 id="planning-challenges"
                 className="text-2xl font-semibold text-white md:text-3xl"
               >
-                Trade messy planning cycles for foresight and control.
+                {t("challenges.title")}
               </h2>
               <p className="mt-4 text-base text-slate-300">
-                Zuply8 focuses on the realities wholesalers and retailers
-                navigate daily: service commitments, supplier constraints, and
-                dynamic demand.
+                {t("challenges.subtitle")}
               </p>
             </div>
             <div className="grid gap-8 md:grid-cols-2">
               <div>
                 <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-rose-300/80">
-                  Before Zuply8
+                  {t("challenges.beforeLabel")}
                 </p>
                 <ul className="space-y-4 text-sm text-slate-200/80">
-                  {painPoints.map((item) => (
-                    <li key={item} className="flex gap-3">
+                  {painPoints.map((item, idx) => (
+                    <li key={idx} className="flex gap-3">
                       <span className="flex h-8 w-8 items-center justify-center rounded-full bg-rose-500/15 text-rose-300">
                         <XCircleIcon className="h-4 w-4" />
                       </span>
@@ -221,11 +205,11 @@ export default async function Home() {
               </div>
               <div>
                 <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-300/80">
-                  With Zuply8
+                  {t("challenges.withLabel")}
                 </p>
                 <ul className="space-y-4 text-sm text-slate-200">
-                  {positiveOutcomes.map((item) => (
-                    <li key={item} className="flex gap-3">
+                  {positiveOutcomes.map((item, idx) => (
+                    <li key={idx} className="flex gap-3">
                       <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-300">
                         <CheckCircleIcon className="h-4 w-4" />
                       </span>
@@ -245,12 +229,10 @@ export default async function Home() {
             id="pillars"
             className="text-3xl font-semibold text-white md:text-4xl"
           >
-            The advanced planning cockpit your team can rely on.
+            {t("pillars.title")}
           </h2>
           <p className="mt-4 text-base text-slate-300">
-            Zuply8 aligns demand signals with smart purchasing recommendations
-            so your planners spend less time reconciling data and more time
-            driving growth.
+            {t("pillars.subtitle")}
           </p>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -282,12 +264,10 @@ export default async function Home() {
               id="flow"
               className="text-3xl font-semibold text-white md:text-4xl"
             >
-              Plan the right mix every cycle.
+              {t("flow.title")}
             </h2>
             <p className="mt-4 max-w-2xl text-base text-slate-300">
-              Connect demand visibility with purchasing execution. Zuply8 gives
-              you the guardrails to protect service levels while dynamically
-              managing inventory.
+              {t("flow.subtitle")}
             </p>
             <div className="mt-10 grid gap-8 md:grid-cols-3">
               {flowSteps.map((step) => (
@@ -314,11 +294,10 @@ export default async function Home() {
             id="testimonials"
             className="text-3xl font-semibold text-white md:text-4xl"
           >
-            Teams trust Zuply8 to keep them ready for every demand shift.
+            {t("testimonials.title")}
           </h2>
           <p className="mt-4 text-base text-slate-300">
-            Hear how wholesalers and retailers are unlocking service level
-            confidence while freeing up working capital.
+            {t("testimonials.subtitle")}
           </p>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -328,7 +307,7 @@ export default async function Home() {
               className="surface-glass flex h-full flex-col gap-6 p-8 transition duration-200 hover:border-white/40"
             >
               <blockquote className="text-sm text-slate-200">
-                “{testimonial.quote}”
+                "{testimonial.quote}"
               </blockquote>
               <figcaption className="mt-auto text-sm text-slate-400">
                 <div className="font-medium text-slate-200">
@@ -347,11 +326,10 @@ export default async function Home() {
         <div className="surface-glass flex flex-col gap-8 px-8 py-12 md:flex-row md:items-center md:justify-between">
           <div className="max-w-sm">
             <h2 id="metrics" className="text-2xl font-semibold text-white">
-              Outcomes you can measure in the first 12 weeks.
+              {t("metrics.title")}
             </h2>
             <p className="mt-3 text-sm text-slate-300">
-              Zuply8 helps teams turn plans into action without sacrificing
-              service.
+              {t("metrics.subtitle")}
             </p>
           </div>
           <div className="grid w-full gap-6 sm:grid-cols-3">
@@ -374,28 +352,27 @@ export default async function Home() {
 
       <section className="section-shell pt-24 pb-12" id="book-demo">
         <div className="surface-glass relative overflow-hidden px-8 py-12 text-center">
-          <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-indigo-500/20 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-1/2 bg-linear-to-b from-indigo-500/20 to-transparent" />
           <div className="relative mx-auto max-w-2xl">
             <p className="badge-soft mb-6 inline-flex bg-white/5 text-indigo-100/90">
-              Ready to modernize your planning cycle?
+              {t("finalCta.badge")}
             </p>
             <h2 className="text-3xl font-semibold text-white md:text-4xl">
-              Book a demo and see how Zuply8 aligns purchasing with demand.
+              {t("finalCta.title")}
             </h2>
             <p className="mt-4 text-base text-slate-300">
-              We’ll tailor the walkthrough to your categories, supplier mix, and
-              planning cadence so you can act with agility.
+              {t("finalCta.subtitle")}
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
                 className="cta-primary inline-flex items-center px-6 py-3 text-base"
                 href="mailto:hello@zuply8.com"
               >
-                <span>Book a demo</span>
+                <span>{t("finalCta.cta")}</span>
                 <ArrowRightIcon className="ml-2 h-5 w-5" />
               </a>
               <span className="text-sm text-slate-300">
-                Prefer to talk now? Call us at{" "}
+                {t("finalCta.phone")}{" "}
                 <span className="text-white">(555) 012-8890</span>
               </span>
             </div>

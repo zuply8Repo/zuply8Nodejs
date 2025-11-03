@@ -1,0 +1,113 @@
+{
+  "target": "Advanced planning for wholesalers & retailers",
+  "hero": {
+    "headline": "Know what to buy, when to buy it, and how it fuels your next quarter.",
+    "subheadline": "Zuply8 brings purchasing, demand, and inventory planning into one advanced workspace. See how your business will evolve, keep priority items ready, and release cash from what can wait.",
+    "ctaDemo": "Book a demo",
+    "ctaWatch": "Watch how Zuply8 works",
+    "trustBadge1": "Trusted by modern planning teams",
+    "trustBadge2": "Built for complex SKU portfolios",
+    "videoPlaceholder": "Product walkthrough video coming soon. Request a demo to see Zuply8 in action."
+  },
+  "challenges": {
+    "title": "Trade messy planning cycles for foresight and control.",
+    "subtitle": "Zuply8 focuses on the realities wholesalers and retailers navigate daily: service commitments, supplier constraints, and dynamic demand.",
+    "beforeLabel": "Before Zuply8",
+    "withLabel": "With Zuply8",
+    "painPoints": [
+      "Hours lost every week wrestling with spreadsheets and stale data.",
+      "Guesswork on what to replenish first, leading to costly stockouts.",
+      "Inventory bloated with products that aren't moving fast enough."
+    ],
+    "positiveOutcomes": [
+      "A single reliable view of demand and purchasing priorities.",
+      "Confidence that the right SKUs stay available for key accounts.",
+      "Working capital freed up to fuel merchandising and growth."
+    ]
+  },
+  "pillars": {
+    "title": "The advanced planning cockpit your team can rely on.",
+    "subtitle": "Zuply8 aligns demand signals with smart purchasing recommendations so your planners spend less time reconciling data and more time driving growth.",
+    "items": [
+      {
+        "title": "Forecast demand with clarity",
+        "description": "Blend historical patterns, seasonality, and promotions so every planning cycle starts with a confident demand signal."
+      },
+      {
+        "title": "Plan purchasing with precision",
+        "description": "Translate demand into smart order recommendations that respect supplier lead times, pack sizes, and service targets."
+      },
+      {
+        "title": "Unlock working capital",
+        "description": "Keep critical SKUs in stock while trimming excess on slow movers to free cash and reinvest in growth initiatives."
+      }
+    ]
+  },
+  "flow": {
+    "title": "Plan the right mix every cycle.",
+    "subtitle": "Connect demand visibility with purchasing execution. Zuply8 gives you the guardrails to protect service levels while dynamically managing inventory.",
+    "steps": [
+      {
+        "title": "Segment what matters",
+        "description": "Identify the SKUs that drive revenue, margin, or customer promises so the team knows where to focus first."
+      },
+      {
+        "title": "Model forward scenarios",
+        "description": "Preview how demand shifts, supplier changes, or new launches will impact inventory weeks before decisions are due."
+      },
+      {
+        "title": "Act with agility",
+        "description": "Turn plans into purchase orders, allocation moves, and replenishment tasks that keep operations nimble and resilient."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Teams trust Zuply8 to keep them ready for every demand shift.",
+    "subtitle": "Hear how wholesalers and retailers are unlocking service level confidence while freeing up working capital.",
+    "items": [
+      {
+        "quote": "Zuply8 gave us the clarity to reorder in hours instead of days. Stockouts on priority lines dropped almost immediately.",
+        "name": "Isabella Chen",
+        "role": "VP Operations",
+        "company": "UrbanCart Wholesale"
+      },
+      {
+        "quote": "We now plan demand and purchases in the same workspace. The team trusts the numbers, and our buyers stay ahead of changes.",
+        "name": "Miguel Santos",
+        "role": "Director of Supply Chain",
+        "company": "MercadoNova Retail Group"
+      },
+      {
+        "quote": "The visibility into cash tied up in slow movers let us rebalance inventory without hurting service levels.",
+        "name": "Lydia Alvarez",
+        "role": "Inventory Planning Lead",
+        "company": "NorthPeak Outfitters"
+      }
+    ]
+  },
+  "metrics": {
+    "title": "Outcomes you can measure in the first 12 weeks.",
+    "subtitle": "Zuply8 helps teams turn plans into action without sacrificing service.",
+    "items": [
+      {
+        "value": "30%",
+        "label": "Less time spent assembling purchase orders"
+      },
+      {
+        "value": "25%",
+        "label": "Reduction in stockouts across critical SKUs"
+      },
+      {
+        "value": "18%",
+        "label": "Inventory cash freed within the first quarter"
+      }
+    ]
+  },
+  "finalCta": {
+    "badge": "Ready to modernize your planning cycle?",
+    "title": "Book a demo and see how Zuply8 aligns purchasing with demand.",
+    "subtitle": "We'll tailor the walkthrough to your categories, supplier mix, and planning cadence so you can act with agility.",
+    "cta": "Book a demo",
+    "phone": "Prefer to talk now? Call us at"
+  }
+}

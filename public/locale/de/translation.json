@@ -1,0 +1,113 @@
+{
+  "target": "Erweitertes Planungsmanagement für Groß- und Einzelhändler",
+  "hero": {
+    "headline": "Wissen Sie, was Sie kaufen müssen, wann Sie es kaufen müssen und wie es Ihr nächstes Quartal antreibt.",
+    "subheadline": "Zuply8 kombiniert Beschaffungs-, Nachfrage- und Bestandsplanung in einem erweiterten Arbeitsbereich. Sehen Sie, wie sich Ihr Geschäft entwickeln wird, halten Sie Prioritätsartikel bereit und geben Sie Bargeld frei, das warten kann.",
+    "ctaDemo": "Demo buchen",
+    "ctaWatch": "Erfahren Sie, wie Zuply8 funktioniert",
+    "trustBadge1": "Vertrauen von modernen Planungsteams",
+    "trustBadge2": "Gebaut für komplexe SKU-Portfolios",
+    "videoPlaceholder": "Produktdemo-Video kommt bald. Fordern Sie eine Demo an, um Zuply8 in Aktion zu sehen."
+  },
+  "challenges": {
+    "title": "Tauschen Sie chaotische Planungszyklen gegen Weitsicht und Kontrolle.",
+    "subtitle": "Zuply8 konzentriert sich auf die Realitäten, denen Groß- und Einzelhändler täglich begegnen: Serviceverpflichtungen, Lieferanteneinschränkungen und dynamische Nachfrage.",
+    "beforeLabel": "Vor Zuply8",
+    "withLabel": "Mit Zuply8",
+    "painPoints": [
+      "Stunden, die jede Woche mit Tabellenkalkulationen und veralteten Daten verschwendet werden.",
+      "Raten, was zuerst nachbestellt werden soll, was zu kostspieligen Lieferengpässen führt.",
+      "Bestände, die mit Produkten aufgebläht sind, die sich nicht schnell genug bewegen."
+    ],
+    "positiveOutcomes": [
+      "Eine einzige zuverlässige Sicht auf Nachfrage und Beschaffungsprioritäten.",
+      "Vertrauen, dass die richtigen SKUs für Schlüsselkonten verfügbar bleiben.",
+      "Freigegebenes Betriebskapital zur Förderung von Merchandising und Wachstum."
+    ]
+  },
+  "pillars": {
+    "title": "Das erweiterte Planungs-Cockpit, auf das sich Ihr Team verlassen kann.",
+    "subtitle": "Zuply8 verbindet Nachfragesignale mit intelligenten Beschaffungsempfehlungen, damit Ihre Planer weniger Zeit mit der Datenabstimmung und mehr Zeit für das Wachstum verbringen.",
+    "items": [
+      {
+        "title": "Nachfrage mit Klarheit prognostizieren",
+        "description": "Kombinieren Sie historische Muster, Saisonalität und Werbeaktionen, damit jeder Planungszyklus mit einem zuverlässigen Nachfragesignal beginnt."
+      },
+      {
+        "title": "Beschaffung mit Präzision planen",
+        "description": "Übersetzen Sie Nachfrage in intelligente Bestellvorschläge, die Lieferantenlieferzeiten, Packungsgrößen und Serviceziele berücksichtigen."
+      },
+      {
+        "title": "Betriebskapital freisetzen",
+        "description": "Halten Sie kritische SKUs auf Lager, während Sie Überschüsse bei langsamen Bewegern reduzieren, um Bargeld freizugeben und in Wachstumsinitiativen zu reinvestieren."
+      }
+    ]
+  },
+  "flow": {
+    "title": "Planen Sie die richtige Mischung für jeden Zyklus.",
+    "subtitle": "Verbinden Sie die Nachfragensichtbarkeit mit der Beschaffungsausführung. Zuply8 gibt Ihnen Leitplanken zum Schutz von Serviceleveln bei gleichzeitiger dynamischer Verwaltung des Inventars.",
+    "steps": [
+      {
+        "title": "Segmentieren Sie, was zählt",
+        "description": "Identifizieren Sie die SKUs, die Umsatz, Marge oder Kundenversprechen antreiben, damit das Team weiß, worauf es sich zuerst konzentrieren soll."
+      },
+      {
+        "title": "Szenarien nach vorne modellieren",
+        "description": "Vorschau, wie Nachfrageverschiebungen, Lieferantenänderungen oder neue Einführungen das Inventar Wochen vor den Entscheidungsterminen beeinflussen werden."
+      },
+      {
+        "title": "Mit Agilität handeln",
+        "description": "Verwandeln Sie Pläne in Bestellungen, Zuordnungswelangen und Auffüllaufgaben, die Betriebe agil und widerstandsfähig halten."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Teams vertrauen auf Zuply8, um sie auf jede Nachfrageverschiebung vorzubereiten.",
+    "subtitle": "Hören Sie, wie Groß- und Einzelhändler Servicelevel-Vertrauen freisetzen und gleichzeitig Betriebskapital freigeben.",
+    "items": [
+      {
+        "quote": "Zuply8 gab uns die Klarheit, innerhalb von Stunden statt Tagen nachzubestellen. Lieferengpässe bei Prioritätslinien gingen fast sofort zurück.",
+        "name": "Isabella Chen",
+        "role": "VP Betrieb",
+        "company": "UrbanCart Wholesale"
+      },
+      {
+        "quote": "Wir planen jetzt Nachfrage und Beschaffung im selben Arbeitsbereich. Das Team vertraut den Zahlen und unsere Einkäufer bleiben Veränderungen voraus.",
+        "name": "Miguel Santos",
+        "role": "Direktor Supply Chain",
+        "company": "MercadoNova Retail Group"
+      },
+      {
+        "quote": "Die Sichtbarkeit von in langsamen Bewegern gebundenem Bargeld ermöglichte es uns, Bestände umzubalancieren, ohne Servicelevel zu beeinträchtigen.",
+        "name": "Lydia Alvarez",
+        "role": "Leiterin Bestandsplanung",
+        "company": "NorthPeak Outfitters"
+      }
+    ]
+  },
+  "metrics": {
+    "title": "Ergebnisse, die Sie in den ersten 12 Wochen messen können.",
+    "subtitle": "Zuply8 hilft Teams, Pläne ohne Serviceopfer in die Tat umzusetzen.",
+    "items": [
+      {
+        "value": "30%",
+        "label": "Weniger Zeit für die Zusammenstellung von Bestellungen"
+      },
+      {
+        "value": "25%",
+        "label": "Reduzierung von Lieferengpässen bei kritischen SKUs"
+      },
+      {
+        "value": "18%",
+        "label": "Bestandsbargeld im ersten Quartal freigegeben"
+      }
+    ]
+  },
+  "finalCta": {
+    "badge": "Bereit, Ihren Planungszyklus zu modernisieren?",
+    "title": "Buchen Sie eine Demo und sehen Sie, wie Zuply8 Beschaffung mit Nachfrage verbindet.",
+    "subtitle": "Wir passen den Rundgang an Ihre Kategorien, Lieferantenmix und Planungsfrequenz an, damit Sie agil handeln können.",
+    "cta": "Demo buchen",
+    "phone": "Möchten Sie jetzt sprechen? Rufen Sie uns an unter"
+  }
+}

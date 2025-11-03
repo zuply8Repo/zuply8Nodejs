@@ -1,0 +1,113 @@
+{
+  "target": "Planificación avanzada para mayoristas y retailers",
+  "hero": {
+    "headline": "Saber qué comprar, cuándo comprarlo y cómo impulsará tu próximo trimestre.",
+    "subheadline": "Zuply8 reúne la planificación de compras, demanda e inventario en un espacio de trabajo avanzado. Visualiza cómo evolucionará tu negocio, mantén los artículos prioritarios listos y libera efectivo de lo que puede esperar.",
+    "ctaDemo": "Reserva una demo",
+    "ctaWatch": "Ver cómo funciona Zuply8",
+    "trustBadge1": "Confianza de equipos de planificación modernos",
+    "trustBadge2": "Construido para portafolios complejos de SKU",
+    "videoPlaceholder": "Video de demostración próximamente. Solicita una demo para ver Zuply8 en acción."
+  },
+  "challenges": {
+    "title": "Intercambia ciclos de planificación caóticos por visión y control.",
+    "subtitle": "Zuply8 se enfoca en las realidades que mayoristas y retailers enfrentan a diario: compromisos de servicio, limitaciones de proveedores y demanda dinámica.",
+    "beforeLabel": "Antes de Zuply8",
+    "withLabel": "Con Zuply8",
+    "painPoints": [
+      "Horas perdidas cada semana luchando con hojas de cálculo y datos obsoletos.",
+      "Conjeturas sobre qué reponer primero, resultando en costosas faltas de stock.",
+      "Inventario hinchado con productos que no se mueven lo suficientemente rápido."
+    ],
+    "positiveOutcomes": [
+      "Una vista única y confiable de demanda y prioridades de compra.",
+      "Confianza de que los SKU correctos permanecen disponibles para cuentas clave.",
+      "Capital de trabajo liberado para impulsar merchandising y crecimiento."
+    ]
+  },
+  "pillars": {
+    "title": "El cockpit de planificación avanzada en el que tu equipo puede confiar.",
+    "subtitle": "Zuply8 alinea señales de demanda con recomendaciones inteligentes de compra para que tus planificadores pasen menos tiempo reconciliando datos y más tiempo impulsando el crecimiento.",
+    "items": [
+      {
+        "title": "Pronostica demanda con claridad",
+        "description": "Combina patrones históricos, estacionalidad y promociones para que cada ciclo de planificación comience con una señal de demanda confiable."
+      },
+      {
+        "title": "Planifica compras con precisión",
+        "description": "Traduce la demanda en recomendaciones inteligentes de pedidos que respetan plazos de proveedores, tamaños de paquete y objetivos de servicio."
+      },
+      {
+        "title": "Desbloquea capital de trabajo",
+        "description": "Mantén SKU críticos en stock mientras reduces el exceso en movimientos lentos para liberar efectivo y reinvertir en iniciativas de crecimiento."
+      }
+    ]
+  },
+  "flow": {
+    "title": "Planifica la mezcla correcta cada ciclo.",
+    "subtitle": "Conecta la visibilidad de demanda con la ejecución de compras. Zuply8 te da las barreras de protección para proteger niveles de servicio mientras gestionas inventario de forma dinámica.",
+    "steps": [
+      {
+        "title": "Segmenta lo que importa",
+        "description": "Identifica los SKU que impulsan ingresos, margen o promesas de clientes para que el equipo sepa dónde enfocarse primero."
+      },
+      {
+        "title": "Modela escenarios futuros",
+        "description": "Previsualiza cómo los cambios de demanda, cambios de proveedores o nuevos lanzamientos impactarán el inventario semanas antes de que se tomen decisiones."
+      },
+      {
+        "title": "Actúa con agilidad",
+        "description": "Convierte planes en órdenes de compra, movimientos de asignación y tareas de reposición que mantienen operaciones ágiles y resilientes."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Los equipos confían en Zuply8 para mantenerse listos ante cada cambio de demanda.",
+    "subtitle": "Escucha cómo mayoristas y retailers están desbloqueando confianza en niveles de servicio mientras liberan capital de trabajo.",
+    "items": [
+      {
+        "quote": "Zuply8 nos dio la claridad para reordenar en horas en lugar de días. Las faltas de stock en líneas prioritarias cayeron casi de inmediato.",
+        "name": "Isabella Chen",
+        "role": "VP Operaciones",
+        "company": "UrbanCart Wholesale"
+      },
+      {
+        "quote": "Ahora planificamos demanda y compras en el mismo espacio de trabajo. El equipo confía en los números y nuestros compradores se adelantan a los cambios.",
+        "name": "Miguel Santos",
+        "role": "Director de Cadena de Suministro",
+        "company": "MercadoNova Retail Group"
+      },
+      {
+        "quote": "La visibilidad del efectivo atado en movimientos lentos nos permitió rebalancear inventario sin afectar los niveles de servicio.",
+        "name": "Lydia Alvarez",
+        "role": "Líder de Planificación de Inventario",
+        "company": "NorthPeak Outfitters"
+      }
+    ]
+  },
+  "metrics": {
+    "title": "Resultados que puedes medir en las primeras 12 semanas.",
+    "subtitle": "Zuply8 ayuda a los equipos a convertir planes en acción sin sacrificar servicio.",
+    "items": [
+      {
+        "value": "30%",
+        "label": "Menos tiempo dedicado a ensamblar órdenes de compra"
+      },
+      {
+        "value": "25%",
+        "label": "Reducción en faltas de stock en SKU críticos"
+      },
+      {
+        "value": "18%",
+        "label": "Efectivo de inventario liberado en el primer trimestre"
+      }
+    ]
+  },
+  "finalCta": {
+    "badge": "¿Listo para modernizar tu ciclo de planificación?",
+    "title": "Reserva una demo y descubre cómo Zuply8 alinea compras con demanda.",
+    "subtitle": "Personalizaremos el recorrido a tus categorías, mezcla de proveedores y cadencia de planificación para que puedas actuar con agilidad.",
+    "cta": "Reserva una demo",
+    "phone": "¿Prefieres hablar ahora? Llámanos al"
+  }
+}
