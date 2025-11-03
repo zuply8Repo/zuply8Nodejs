@@ -8,6 +8,9 @@ import {
   XCircleIcon,
 } from "@heroicons/react/24/outline";
 
+import { getServerI18n } from "./lib/i18n/server";
+import LanguageSwitcher from "./ui/languageSwitcher";
+
 const pillars = [
   {
     title: "Forecast demand with clarity",
@@ -102,7 +105,14 @@ const metrics = [
   },
 ];
 
-export default function Home() {
+const lngs = {
+  en: { nativeName: "En" },
+  de: { nativeName: "De" },
+  es: { nativeName: "Es" },
+};
+
+export default async function Home() {
+  const { t, lng } = await getServerI18n("translation");
   return (
     <main className="relative isolate overflow-hidden pb-24">
       <div className="pointer-events-none absolute inset-0 -z-10">
@@ -113,9 +123,8 @@ export default function Home() {
       <section className="section-shell pt-24 md:pt-32">
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)]">
           <div>
-            <div className="badge-soft mb-6">
-              Advanced planning for wholesalers & retailers
-            </div>
+            <div className="badge-soft mb-6">{t("target")}</div>
+            <LanguageSwitcher />
             <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
               Know what to buy, when to buy it, and how it fuels your next
               quarter.
