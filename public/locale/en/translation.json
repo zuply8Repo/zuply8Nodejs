@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "title": "Zuply8 - Advanced Planning for Wholesalers & Retailers",
-    "description": "Transform your planning cycle with Zuply8. Forecast demand, plan purchasing with precision, and unlock working capital. Trusted by modern planning teams."
+    "title": "Zuply8 | Demand Forecasting & Purchase Planning Software with ERP Integration (SAP, Business Central, Odoo)",
+    "description": "Improve forecast accuracy, reduce overstock, and plan purchase orders automatically. Zuply8 integrates with SAP S/4HANA, Business Central, and Odoo to support Integrated Business Planning (IBP) for wholesalers and mid-sized companies (10–50M EUR). Optimize working capital and increase supply chain efficiency."
   },
   "target": "Advanced planning for wholesalers & retailers",
   "hero": {
-    "headline": "Know what to buy, when to buy it, and how it fuels your next quarter.",
-    "subheadline": "Zuply8 brings purchasing, demand, and inventory planning into one advanced workspace. See how your business will evolve, keep priority items ready, and release cash from what can wait.",
-    "ctaDemo": "Book a demo",
-    "ctaWatch": "Watch how Zuply8 works",
-    "trustBadge1": "Trusted by modern planning teams",
-    "trustBadge2": "Built for complex SKU portfolios",
-    "videoPlaceholder": "Product walkthrough video coming soon. Request a demo to see Zuply8 in action."
+    "headline": "Stop Guessing What to Buy. Start Planning with Confidence.",
+    "subheadline": "Zuply8 connects to your ERP and gives purchasing, supply chain, and operations teams a shared workspace to align demand, inventory, and buying decisions. Keep high-priority SKUs available, reduce excess stock, and free up cash — without the need for a complex IBP system.",
+    "ctaDemo": "Book a Demo",
+    "ctaWatch": "See How Zuply8 Works",
+    "trustBadge1": "Trusted by growing retail and wholesale planning teams",
+    "trustBadge2": "Built for complex SKU portfolios and tight cash cycles",
+    "videoPlaceholder": "A full product walkthrough is coming soon. In the meantime, book a demo to see Zuply8 in action with your data."
   },
   "challenges": {
     "title": "Trade messy planning cycles for foresight and control.",

@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "title": "Zuply8 - Planificación Avanzada para Mayoristas y Retailers",
-    "description": "Transforma tu ciclo de planificación con Zuply8. Pronostica demanda, planifica compras con precisión y desbloquea capital de trabajo. Confianza de equipos modernos de planificación."
+    "title": "Zuply8 | Software de Pronóstico de Demanda y Planificación de Compras con Integración ERP (SAP, Business Central, Odoo)",
+    "description": "Mejora la precisión del pronóstico, reduce el exceso de inventario y planifica órdenes de compra automáticamente. Zuply8 se integra con SAP S/4HANA, Business Central y Odoo para soportar Integrated Business Planning (IBP) para mayoristas y empresas medianas (10–50M EUR). Optimiza el capital de trabajo y aumenta la eficiencia de tu cadena de suministro."
   },
   "target": "Planificación avanzada para mayoristas y retailers",
   "hero": {
-    "headline": "Saber qué comprar, cuándo comprarlo y cómo impulsará tu próximo trimestre.",
-    "subheadline": "Zuply8 reúne la planificación de compras, demanda e inventario en un espacio de trabajo avanzado. Visualiza cómo evolucionará tu negocio, mantén los artículos prioritarios listos y libera efectivo de lo que puede esperar.",
-    "ctaDemo": "Reserva una demo",
-    "ctaWatch": "Ver cómo funciona Zuply8",
-    "trustBadge1": "Confianza de equipos de planificación modernos",
-    "trustBadge2": "Construido para portafolios complejos de SKU",
-    "videoPlaceholder": "Video de demostración próximamente. Solicita una demo para ver Zuply8 en acción."
+    "headline": "Deja de adivinar qué comprar. Empieza a planear con confianza.",
+    "subheadline": "Zuply8 se conecta a tu ERP y ofrece a los equipos de compras, cadena de suministro y operaciones un espacio de trabajo compartido para alinear la demanda, el inventario y las decisiones de compra. Mantén disponibles los SKUs prioritarios, reduce el exceso de inventario y libera flujo de efectivo — sin necesidad de un sistema IBP complejo.",
+    "ctaDemo": "Book a Demo",
+    "ctaWatch": "Descubre cómo funciona Zuply8",
+    "trustBadge1": "Confiado por equipos de planificación en crecimiento del retail y mayoreo",
+    "trustBadge2": "Diseñado para portafolios de SKU complejos y ciclos de efectivo ajustados",
+    "videoPlaceholder": "Un recorrido completo del producto estará disponible pronto. Mientras tanto, agenda una demostración para ver Zuply8 en acción con tus propios datos."
   },
   "challenges": {
     "title": "Intercambia ciclos de planificación caóticos por visión y control.",
