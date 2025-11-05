@@ -13,7 +13,7 @@ export default function LanguageSwitcher() {
 
   async function setLang(lng: string) {
     // 1) update client i18n immediately (instant UI feedback)
-    await i18n.changeLanguage(lng);
+    i18n.changeLanguage(lng as any);
 
     // 2) persist for server components, then refresh RSC tree
     startTransition(async () => {
