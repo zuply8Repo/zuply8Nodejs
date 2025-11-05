@@ -1,17 +1,33 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Features
 
-First, run the development server:
+- Multi-language support (English, Spanish, German) with i18next
+- Customer contact form with HubSpot CRM integration
+- Responsive design with Tailwind CSS
+- Form validation (client-side and server-side)
+- Security measures against XSS and injection attacks
+
+## Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# HubSpot API Configuration
+# Get your API token from: https://app.hubspot.com/settings/personal-access-token
+HUBSPOT_API_TOKEN=your_hubspot_api_token_here
+```
+
+## Getting Started
+
+First, install dependencies and run the development server:
+
+```bash
+# Install dependencies
+pnpm install
+
+# Run the development server
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
