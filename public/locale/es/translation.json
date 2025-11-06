@@ -113,5 +113,38 @@
     "subtitle": "Personalizaremos el recorrido a tus categorías, mezcla de proveedores y cadencia de planificación para que puedas actuar con agilidad.",
     "cta": "Reserva una demo",
     "phone": "¿Prefieres hablar ahora? Llámanos al"
+  },
+  "cookies": {
+    "banner": {
+      "title": "Consentimiento de Cookies",
+      "description": "Utilizamos cookies para mejorar su experiencia, analizar el tráfico del sitio y proporcionar contenido personalizado. Puede elegir qué cookies aceptar.",
+      "acceptAll": "Aceptar Todas",
+      "rejectAll": "Rechazar Todas",
+      "customize": "Personalizar Ajustes"
+    },
+    "preferences": {
+      "title": "Preferencias de Cookies",
+      "save": "Guardar Preferencias",
+      "cancel": "Cancelar",
+      "alwaysActive": "Siempre Activo",
+      "necessary": {
+        "title": "Cookies Necesarias",
+        "description": "Necesarias para la funcionalidad básica del sitio web. Estas cookies no se pueden desactivar ya que son esenciales para que el sitio funcione correctamente.",
+        "alwaysActive": "Siempre Activo"
+      },
+      "analytics": {
+        "title": "Cookies de Análisis",
+        "description": "Nos ayudan a comprender cómo los visitantes usan nuestro sitio web al recopilar e informar información anónima sobre su visita."
+      },
+      "marketing": {
+        "title": "Cookies de Marketing",
+        "description": "Se utilizan para rastrear visitantes en sitios web para mostrar anuncios relevantes y atractivos adaptados a sus intereses."
+      },
+      "preferences": {
+        "title": "Cookies de Preferencias",
+        "description": "Recuerdan sus configuraciones y preferencias, como la selección de idioma y región, para proporcionar una experiencia personalizada."
+      }
+    },
+    "settingsButton": "Configuración de Cookies"
   }
 }

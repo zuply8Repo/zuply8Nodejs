@@ -11,6 +11,7 @@ import {
 import { getServerI18n } from "../lib/i18n/server";
 import LanguageSwitcher from "../ui/languageSwitcher";
 import CustomerForm from "../ui/customer-form";
+import { CookieSettingsButton } from "../ui/cookie-settings-button";
 
 // Icon mappings for pillar items
 const iconMap = {
@@ -354,6 +355,18 @@ export default async function Home() {
       <section className="section-shell pt-24 pb-12" id="book-demo">
         <CustomerForm />
       </section>
+
+      {/* Footer with Cookie Settings */}
+      {/* <footer className="border-t border-gray-200 bg-gray-50">
+        <div className="section-shell py-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-gray-600">
+              © {new Date().getFullYear()} Zuply8. All rights reserved.
+            </p>
+            <CookieSettingsButton />
+          </div>
+        </div>
+      </footer> */}
     </main>
   );
 }

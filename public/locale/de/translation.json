@@ -113,5 +113,38 @@
     "subtitle": "Wir passen den Rundgang an Ihre Kategorien, Lieferantenmix und Planungsfrequenz an, damit Sie agil handeln können.",
     "cta": "Demo buchen",
     "phone": "Möchten Sie jetzt sprechen? Rufen Sie uns an unter"
+  },
+  "cookies": {
+    "banner": {
+      "title": "Cookie-Einwilligung",
+      "description": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern, den Website-Traffic zu analysieren und personalisierte Inhalte bereitzustellen. Sie können wählen, welche Cookies Sie akzeptieren möchten.",
+      "acceptAll": "Alle akzeptieren",
+      "rejectAll": "Alle ablehnen",
+      "customize": "Einstellungen anpassen"
+    },
+    "preferences": {
+      "title": "Cookie-Einstellungen",
+      "save": "Einstellungen speichern",
+      "cancel": "Abbrechen",
+      "alwaysActive": "Immer aktiv",
+      "necessary": {
+        "title": "Notwendige Cookies",
+        "description": "Erforderlich für die grundlegende Funktionalität der Website. Diese Cookies können nicht deaktiviert werden, da sie für den ordnungsgemäßen Betrieb der Website unerlässlich sind.",
+        "alwaysActive": "Immer aktiv"
+      },
+      "analytics": {
+        "title": "Analyse-Cookies",
+        "description": "Helfen uns zu verstehen, wie Besucher unsere Website nutzen, indem sie anonyme Informationen über Ihren Besuch sammeln und berichten."
+      },
+      "marketing": {
+        "title": "Marketing-Cookies",
+        "description": "Werden verwendet, um Besucher über Websites hinweg zu verfolgen, um relevante und ansprechende Werbung anzuzeigen, die auf Ihre Interessen zugeschnitten ist."
+      },
+      "preferences": {
+        "title": "Präferenz-Cookies",
+        "description": "Speichern Ihre Einstellungen und Präferenzen, wie z. B. Sprachauswahl und Region, um ein personalisiertes Erlebnis zu bieten."
+      }
+    },
+    "settingsButton": "Cookie-Einstellungen"
   }
 }

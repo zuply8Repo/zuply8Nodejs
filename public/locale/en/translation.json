@@ -113,5 +113,38 @@
     "subtitle": "We'll tailor the walkthrough to your categories, supplier mix, and planning cadence so you can act with agility.",
     "cta": "Book a demo",
     "phone": "Prefer to talk now? Call us at"
+  },
+  "cookies": {
+    "banner": {
+      "title": "Cookie Consent",
+      "description": "We use cookies to improve your experience, analyze site traffic, and provide personalized content. You can choose which cookies to accept.",
+      "acceptAll": "Accept All",
+      "rejectAll": "Reject All",
+      "customize": "Customize Settings"
+    },
+    "preferences": {
+      "title": "Cookie Preferences",
+      "save": "Save Preferences",
+      "cancel": "Cancel",
+      "alwaysActive": "Always Active",
+      "necessary": {
+        "title": "Necessary Cookies",
+        "description": "Required for basic website functionality. These cookies cannot be disabled as they are essential for the site to work properly.",
+        "alwaysActive": "Always Active"
+      },
+      "analytics": {
+        "title": "Analytics Cookies",
+        "description": "Help us understand how visitors use our website by collecting and reporting anonymous information about your visit."
+      },
+      "marketing": {
+        "title": "Marketing Cookies",
+        "description": "Used to track visitors across websites to display relevant and engaging advertisements tailored to your interests."
+      },
+      "preferences": {
+        "title": "Preference Cookies",
+        "description": "Remember your settings and preferences, such as language selection and region, to provide a personalized experience."
+      }
+    },
+    "settingsButton": "Cookie Settings"
   }
 }

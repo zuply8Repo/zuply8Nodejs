@@ -4,6 +4,10 @@ import { cookies, headers } from "next/headers";
 import "./globals.css";
 import { I18nClientProvider } from "./lib/i18n/client";
 import { supportedLngs, fallbackLng } from "@/i18n";
+import { CookieConsentProvider } from "./lib/context/cookie-consent-context";
+import { CookieConsentBanner } from "./ui/cookie-consent-banner";
+import { CookiePreferencesModal } from "./ui/cookie-preferences-modal";
+import { GoogleAnalytics } from "./lib/analytics/google-analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +45,14 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <I18nClientProvider lng={lng}>{children}</I18nClientProvider>
+        <I18nClientProvider lng={lng}>
+          <CookieConsentProvider>
+            <GoogleAnalytics />
+            {children}
+            <CookieConsentBanner />
+            <CookiePreferencesModal />
+          </CookieConsentProvider>
+        </I18nClientProvider>
       </body>
     </html>
   );
