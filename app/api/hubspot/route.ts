@@ -71,7 +71,8 @@ function validateRequestBody(body: any): {
   if (!validateName(firstName)) {
     return {
       valid: false,
-      error: "First name must be 2-50 characters and contain only valid characters",
+      error:
+        "First name must be 2-50 characters and contain only valid characters",
     };
   }
 
@@ -82,7 +83,8 @@ function validateRequestBody(body: any): {
   if (!validateName(lastName)) {
     return {
       valid: false,
-      error: "Last name must be 2-50 characters and contain only valid characters",
+      error:
+        "Last name must be 2-50 characters and contain only valid characters",
     };
   }
 
@@ -93,7 +95,8 @@ function validateRequestBody(body: any): {
   if (!validateCompany(company)) {
     return {
       valid: false,
-      error: "Company name must be 2-100 characters and contain only valid characters",
+      error:
+        "Company name must be 2-100 characters and contain only valid characters",
     };
   }
 
@@ -104,23 +107,44 @@ function validateRequestBody(body: any): {
 }
 
 export async function POST(request: NextRequest) {
+  const requestId = `req_${Date.now()}_${Math.random()
+    .toString(36)
+    .substr(2, 9)}`;
+
   try {
+    console.log(`[${requestId}] Starting HubSpot API request`);
+
     // Check if HubSpot API token is configured
     if (!process.env.HUBSPOT_API_TOKEN) {
-      console.error("HUBSPOT_API_TOKEN is not configured");
+      console.error(
+        `[${requestId}] CRITICAL: HUBSPOT_API_TOKEN is not configured in environment variables`
+      );
+      console.error(
+        `[${requestId}] Available env vars:`,
+        Object.keys(process.env).filter((key) => key.includes("HUBSPOT"))
+      );
       return NextResponse.json(
-        { error: "Service configuration error. Please contact support." },
+        {
+          error: "Service configuration error. Please contact support.",
+          requestId,
+        },
         { status: 500 }
       );
     }
+
+    console.log(
+      `[${requestId}] Environment check passed - HUBSPOT_API_TOKEN is present`
+    );
 
     // Parse request body
     let body;
     try {
       body = await request.json();
+      console.log(`[${requestId}] Request body parsed successfully`);
     } catch (error) {
+      console.error(`[${requestId}] Failed to parse JSON:`, error);
       return NextResponse.json(
-        { error: "Invalid JSON in request body" },
+        { error: "Invalid JSON in request body", requestId },
         { status: 400 }
       );
     }
@@ -128,15 +152,20 @@ export async function POST(request: NextRequest) {
     // Validate request body
     const validation = validateRequestBody(body);
     if (!validation.valid) {
+      console.warn(`[${requestId}] Validation failed:`, validation.error);
       return NextResponse.json(
-        { error: validation.error },
+        { error: validation.error, requestId },
         { status: 400 }
       );
     }
 
     const contactData = validation.data!;
+    console.log(
+      `[${requestId}] Validation passed for email: ${contactData.email}`
+    );
 
     // Make request to HubSpot API
+    console.log(`[${requestId}] Sending request to HubSpot API...`);
     const hubspotResponse = await fetch(
       "https://api.hubapi.com/crm/v3/objects/contacts",
       {
@@ -156,18 +185,35 @@ export async function POST(request: NextRequest) {
       }
     );
 
+    console.log(
+      `[${requestId}] HubSpot API responded with status: ${hubspotResponse.status}`
+    );
+
     // Handle HubSpot API response
     if (!hubspotResponse.ok) {
-      const errorData: HubSpotError = await hubspotResponse.json();
-      console.error("HubSpot API error:", errorData);
+      let errorData: HubSpotError;
+      try {
+        errorData = await hubspotResponse.json();
+        console.error(
+          `[${requestId}] HubSpot API error response:`,
+          JSON.stringify(errorData, null, 2)
+        );
+      } catch (e) {
+        console.error(`[${requestId}] Failed to parse HubSpot error response`);
+        errorData = { message: "Unable to parse error response" };
+      }
 
       // Check for specific error cases
       if (hubspotResponse.status === 409) {
         // Contact already exists - this might actually be acceptable
+        console.log(
+          `[${requestId}] Contact already exists (409) - treating as success`
+        );
         return NextResponse.json(
           {
             success: true,
             message: "Contact information received successfully",
+            requestId,
           },
           { status: 200 }
         );
@@ -175,17 +221,27 @@ export async function POST(request: NextRequest) {
 
       if (hubspotResponse.status === 401 || hubspotResponse.status === 403) {
         // Authentication/authorization error
+        console.error(
+          `[${requestId}] Authentication error (${hubspotResponse.status}) - check API token validity`
+        );
         return NextResponse.json(
-          { error: "Service authentication error. Please contact support." },
+          {
+            error: "Service authentication error. Please contact support.",
+            requestId,
+          },
           { status: 500 }
         );
       }
 
       // Generic error for other cases
+      console.error(
+        `[${requestId}] HubSpot API returned error status ${hubspotResponse.status}`
+      );
       return NextResponse.json(
         {
           error:
             "Unable to process your request at this time. Please try again later.",
+          requestId,
         },
         { status: 500 }
       );
@@ -193,21 +249,37 @@ export async function POST(request: NextRequest) {
 
     // Success response
     const responseData = await hubspotResponse.json();
+    console.log(`[${requestId}] Contact created successfully in HubSpot`);
     return NextResponse.json(
       {
         success: true,
         message: "Contact created successfully",
         data: responseData,
+        requestId,
       },
       { status: 200 }
     );
   } catch (error) {
     // Catch any unexpected errors
-    console.error("Unexpected error in HubSpot API route:", error);
+    console.error(`[${requestId}] UNEXPECTED ERROR:`, error);
+    console.error(
+      `[${requestId}] Error name:`,
+      error instanceof Error ? error.name : "Unknown"
+    );
+    console.error(
+      `[${requestId}] Error message:`,
+      error instanceof Error ? error.message : String(error)
+    );
+    console.error(
+      `[${requestId}] Error stack:`,
+      error instanceof Error ? error.stack : "No stack trace"
+    );
+
     return NextResponse.json(
       {
         error:
           "An unexpected error occurred. Please try again later or contact support.",
+        requestId,
       },
       { status: 500 }
     );
@@ -216,30 +288,17 @@ export async function POST(request: NextRequest) {
 
 // Handle unsupported HTTP methods
 export async function GET() {
-  return NextResponse.json(
-    { error: "Method not allowed" },
-    { status: 405 }
-  );
+  return NextResponse.json({ error: "Method not allowed" }, { status: 405 });
 }
 
 export async function PUT() {
-  return NextResponse.json(
-    { error: "Method not allowed" },
-    { status: 405 }
-  );
+  return NextResponse.json({ error: "Method not allowed" }, { status: 405 });
 }
 
 export async function DELETE() {
-  return NextResponse.json(
-    { error: "Method not allowed" },
-    { status: 405 }
-  );
+  return NextResponse.json({ error: "Method not allowed" }, { status: 405 });
 }
 
 export async function PATCH() {
-  return NextResponse.json(
-    { error: "Method not allowed" },
-    { status: 405 }
-  );
+  return NextResponse.json({ error: "Method not allowed" }, { status: 405 });
 }
-
