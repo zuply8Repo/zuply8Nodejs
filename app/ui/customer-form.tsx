@@ -41,7 +41,6 @@ export default function CustomerForm() {
   // Sanitize input to prevent XSS
   const sanitizeInput = (input: string): string => {
     return input
-      .trim()
       .replace(/[<>]/g, "") // Remove potential HTML tags
       .slice(0, 200); // Limit length
   };
@@ -62,33 +61,39 @@ export default function CustomerForm() {
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
 
+    // Trim values for validation
+    const trimmedEmail = formData.email.trim();
+    const trimmedFirstName = formData.firstName.trim();
+    const trimmedLastName = formData.lastName.trim();
+    const trimmedCompany = formData.company.trim();
+
     // Email validation
-    if (!formData.email) {
+    if (!trimmedEmail) {
       newErrors.email = "Email is required";
-    } else if (!validateEmail(formData.email)) {
+    } else if (!validateEmail(trimmedEmail)) {
       newErrors.email = "Please enter a valid email address";
     }
 
     // First name validation
-    if (!formData.firstName) {
+    if (!trimmedFirstName) {
       newErrors.firstName = "First name is required";
-    } else if (!validateName(formData.firstName)) {
+    } else if (!validateName(trimmedFirstName)) {
       newErrors.firstName =
         "First name must be 2-50 characters and contain only letters, spaces, hyphens, or apostrophes";
     }
 
     // Last name validation
-    if (!formData.lastName) {
+    if (!trimmedLastName) {
       newErrors.lastName = "Last name is required";
-    } else if (!validateName(formData.lastName)) {
+    } else if (!validateName(trimmedLastName)) {
       newErrors.lastName =
         "Last name must be 2-50 characters and contain only letters, spaces, hyphens, or apostrophes";
     }
 
     // Company validation
-    if (!formData.company) {
+    if (!trimmedCompany) {
       newErrors.company = "Company name is required";
-    } else if (!validateCompany(formData.company)) {
+    } else if (!validateCompany(trimmedCompany)) {
       newErrors.company =
         "Company name must be 2-100 characters and contain only letters, numbers, and common business characters";
     }
@@ -128,13 +133,21 @@ export default function CustomerForm() {
 
     setIsSubmitting(true);
 
+    // Prepare trimmed data for submission
+    const trimmedData = {
+      email: formData.email.trim(),
+      firstName: formData.firstName.trim(),
+      lastName: formData.lastName.trim(),
+      company: formData.company.trim(),
+    };
+
     try {
       const response = await fetch("/api/hubspot", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(trimmedData),
       });
 
       const data = await response.json();
