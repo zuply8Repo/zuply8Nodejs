@@ -45,10 +45,13 @@ export async function generateMetadata({
     console.error("Error loading metadata translations:", error);
   }
 
-  // Build alternate language links for SEO
-  const languages: Record<string, string> = {};
+  // Build alternate language links for SEO with absolute URLs
+  const baseUrl = "https://zuply8.com";
+  const languages: Record<string, string> = {
+    "x-default": baseUrl,
+  };
   supportedLngs.forEach((lang) => {
-    languages[lang] = `/${lang}`;
+    languages[lang] = `${baseUrl}/${lang}`;
   });
 
   return {
@@ -56,7 +59,7 @@ export async function generateMetadata({
     description:
       metadata.description || "Advanced planning for wholesalers & retailers",
     alternates: {
-      canonical: `/${lng}`,
+      canonical: `${baseUrl}/${lng}`,
       languages,
     },
     openGraph: {
